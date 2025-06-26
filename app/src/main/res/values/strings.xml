@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">practiceproject</string>
+    <string-array name="gender">
+        <item name="select">select your gender</item>
+        <item name="male">Male</item>
+        <item name="female">Female</item>
+        <item name="other">Other</item>
+    </string-array>
+    <string-array name="colors_list">
+        <item name="first">Red</item>
+        <item name="second">Yellow</item>
+        <item name="third">Blue</item>
+    </string-array>
+</resources>
