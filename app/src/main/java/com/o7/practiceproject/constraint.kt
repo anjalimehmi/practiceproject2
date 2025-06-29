@@ -9,31 +9,20 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity(){
+class constraint : AppCompatActivity() {
     var btn: Button? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_constraint)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        findViewById<Button>(R.id.btnNext).setOnClickListener {
-            Toast.makeText(this, "on click message displayed", Toast.LENGTH_SHORT).show()
-            var intent = Intent(this, Edittext_fetching::class.java)
-            startActivity(intent)
-        }
-        findViewById<Button>(R.id.btnImplicit).setOnClickListener {
-            var intent = Intent(this, implicitactivity ::class.java)
-                .putExtra("data", "My Data")
-                 startActivity(intent)
-        }
-        findViewById<Button>(R.id.btnConstraintScreen).setOnClickListener {
-            var intent = Intent(this, constraint ::class.java)
-                .putExtra("data", "My Data")
+        findViewById<Button>(R.id.btnBottom).setOnClickListener {
+            Toast.makeText(this, "Wait...", Toast.LENGTH_SHORT).show()
+            var intent = Intent(this, constraint_screen::class.java)
             startActivity(intent)
         }
     }
